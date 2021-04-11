@@ -12,6 +12,7 @@ def info():
 
 @app.route('/puppy/<name>')
 def puppy(name):
-    return "Upper case: {}".format(name.upper())
+    return "Upper case: {}".format(name.upper()) 
+
 if __name__ == '__main__':
     app.run()
