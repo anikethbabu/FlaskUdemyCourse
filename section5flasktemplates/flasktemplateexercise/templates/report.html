@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <p>Let's see how you performed</p>
+
+            {% if report%}
+                <p>Your username passed the 3 requirements!</p>
+            {% else %}
+                <p>Oh no! Looks like you had issues with you username!</p>
+                <p>Here are the requirements you failed</p>
+                <ul>
+                {% if uppercase == False %}
+                    <li>You did not use an uppercase character.</li>
+                {% endif %}
+                {% if lowercase == False %}
+                    <li>You did not use a lowercase character.</li>
+                {% endif %}
+                {% if number == False %}
+                    <li>You did not end your username with a number.</li>
+                {% endif %}
+                </ul>
+            {% endif %}
+        </div>
+{% endblock  %}
