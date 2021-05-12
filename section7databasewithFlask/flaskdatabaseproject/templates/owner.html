@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container bg-light">
+    <form method="post">
+        <h1 class="display-3 text-center">Add an Owner for a Puppy!</h1>
+        <div class="col-auto">
+            {{form.name.label(class="form-label lead",for='owner')}} {{form.name(class="form-control",id='owner')}}
+        </div>
+        {{form.hidden_tag()}}
+        <br>
+        <div class="col-auto">
+            {{form.id.label(class="form-label lead",for='idans')}} {{form.id(class="form-control",id='idans')}}<br>
+            {{form.submit(class="btn btn-primary")}}
+        </div>
+
+    </form>
+</div>
+
+{% endblock  %}
